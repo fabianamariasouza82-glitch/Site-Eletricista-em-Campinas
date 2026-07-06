@@ -404,7 +404,11 @@ export default function Home() {
           <div className="border-t border-blue-800 pt-8 flex flex-col items-center gap-6 text-center text-blue-200 text-sm">
             <div className="w-full max-w-4xl mx-auto">
               <h3 className="text-xl font-bold text-white mb-6">O que nossos clientes dizem</h3>
-              <div className="trustindex-widget-container min-h-[120px] mb-4">
+              <div className="trustindex-widget-container min-h-[120px] mb-4 overflow-hidden relative">
+                <style dangerouslySetInnerHTML={{ __html: `
+                  .ti-widget.ti-goog { position: relative !important; bottom: auto !important; left: auto !important; right: auto !important; margin: 0 auto !important; }
+                  .ti-free-sticky { display: none !important; }
+                ` }} />
                 <div className="ti-widget" data-widget-id="f378aac752669833cc56d5358ec"></div>
               </div>
             </div>
