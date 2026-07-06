@@ -177,18 +177,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Google Reviews Section */}
-      <section className="py-16 bg-white">
-        <div className="container">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-foreground">O que nossos clientes dizem</h2>
-          </div>
-          {/* Trustindex Widget */}
-          <div className="trustindex-widget-container min-h-[150px]">
-            <div className="ti-widget" data-widget-id="f378aac752669833cc56d5358ec"></div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Section */}
       <section id="servicos" className="py-20 scroll-mt-28">
@@ -412,12 +401,18 @@ export default function Home() {
               <p className="text-blue-200 text-sm">✓ NR35</p>
             </div>
           </div>
-          <div className="border-t border-blue-800 pt-8 flex flex-col items-center gap-4 text-center text-blue-200 text-sm">
+          <div className="border-t border-blue-800 pt-8 flex flex-col items-center gap-6 text-center text-blue-200 text-sm">
+            <div className="w-full max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold text-white mb-6">O que nossos clientes dizem</h3>
+              <div className="trustindex-widget-container min-h-[120px] mb-4">
+                <div className="ti-widget" data-widget-id="f378aac752669833cc56d5358ec"></div>
+              </div>
+            </div>
             <a
               href="https://g.page/r/CR9hqmiONmcMEBM/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 hover:bg-white/20 rounded-lg font-medium text-white transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-medium text-white transition-colors border border-white/10"
             >
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               Avalie-nos no Google
