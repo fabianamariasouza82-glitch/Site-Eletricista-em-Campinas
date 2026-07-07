@@ -16,5 +16,5 @@ export default function TrustindexWidget() {
     containerRef.current.appendChild(script);
   }, []);
 
-  return <div ref={containerRef}></div>;
+  return <div ref={containerRef} className="w-full flex justify-center"></div>;
 }
