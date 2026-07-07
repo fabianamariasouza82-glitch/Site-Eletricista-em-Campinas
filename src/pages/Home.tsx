@@ -5,6 +5,7 @@ import { Phone, MapPin, Clock, CheckCircle, Zap, Shield, AlertCircle, Menu, X, P
 import { Link } from "wouter";
 import { neighborhoods, blogPosts } from "@/lib/data";
 import { useSEO } from "@/hooks/useSEO";
+import TrustindexWidget from "@/components/TrustindexWidget";
 
 const faqs = [
   {
@@ -79,7 +80,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white w-full overflow-x-hidden">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-28">
@@ -121,34 +122,35 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section v3.5 - Forced Layout */}
-      <section 
-        className="relative overflow-hidden h-[600px] md:h-[90vh] w-full flex items-center bg-blue-950 bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.4) 50%, transparent 100%), url("/manus-storage/hero_eletricista_8af14beb.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 5%'
-        }}
-      >
-        <div className="w-full px-8 md:px-24 relative pt-20 md:pt-40">
-          <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-[1.1]">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden min-h-[420px] sm:min-h-[520px] md:min-h-[780px] lg:min-h-[900px]">
+        <div className="absolute inset-0">
+          <img 
+            src="/manus-storage/hero_eletricista_8af14beb.jpg" 
+            alt="Eletricista profissional" 
+            className="w-full h-full object-cover object-[center_15%] md:object-[75%_15%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/40"></div>
+        </div>
+        <div className="container relative py-20 md:py-40 lg:py-48">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Eletricista Profissional em Campinas
             </h1>
-            <p className="text-2xl md:text-3xl text-blue-50 mb-12 max-w-3xl leading-relaxed">
+            <p className="text-lg text-blue-100 mb-8">
               Mais de 20 anos de experiência. Atendimento 24 horas para residências, comércios e condomínios. Certificado NR10 e NR35.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="https://api.whatsapp.com/send/?phone=5519994252525&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento."
-                className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-accent text-accent-foreground rounded-2xl text-xl font-black hover:opacity-90 transition-all hover:scale-105 shadow-2xl"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
-                <Phone className="w-7 h-7" />
+                <Phone className="w-5 h-5" />
                 Solicitar Orçamento
               </a>
               <a 
                 href="#servicos"
-                className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-white/10 text-white rounded-2xl text-xl font-black hover:bg-white/20 transition-all border border-white/40 backdrop-blur-md"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-colors border border-white/30"
               >
                 Ver Serviços
               </a>
@@ -158,9 +160,9 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-blue-50 w-full">
-        <div className="w-full px-8 md:px-32 max-w-[1600px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <section className="py-16 bg-blue-50">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, idx) => {
               const Icon = benefit.icon;
               return (
@@ -176,29 +178,27 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* Services Section */}
-      <section id="servicos" className="py-32 scroll-mt-28 w-full">
-        <div className="w-full px-8 md:px-32 max-w-[1600px] mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+      <section id="servicos" className="py-20 scroll-mt-28">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Nossos Serviços
             </h2>
-            <p className="text-2xl text-muted-foreground max-w-4xl mx-auto">
-              Oferecemos soluções completas para todas as suas necessidades elétricas em Campinas
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Oferecemos soluções completas para todas as suas necessidades elétricas
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service, idx) => {
               const Icon = service.icon;
               return (
-                <Card key={idx} className="p-8 hover:shadow-xl transition-all border-0 bg-white shadow-md">
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-accent" />
+                <Card key={idx} className="p-6 hover:shadow-lg transition-shadow border-0">
+                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-accent" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-lg text-muted-foreground mb-6">{service.description}</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4">{service.description}</p>
                   <Link href="/servicos" className="text-accent font-medium hover:text-accent/80 transition-colors">
                     Saiba mais →
                   </Link>
@@ -215,9 +215,9 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-24 bg-blue-50 scroll-mt-28 w-full">
-        <div className="container mx-auto px-4 max-w-[1400px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section id="sobre" className="py-20 bg-blue-50 scroll-mt-28">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Quem Somos
@@ -264,8 +264,8 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contato" className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 scroll-mt-28 w-full">
-        <div className="container mx-auto px-4 text-center">
+      <section id="contato" className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 scroll-mt-28">
+        <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Precisa de um Eletricista Agora?
           </h2>
@@ -292,8 +292,8 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-blue-50 w-full">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="py-20 bg-blue-50">
+        <div className="container max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Perguntas Frequentes
@@ -401,49 +401,15 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-blue-800 pt-8 flex flex-col items-center gap-6 text-center text-blue-200 text-sm">
-            <div className="w-full max-w-4xl mx-auto">
+            <div className="w-full">
               <h3 className="text-xl font-bold text-white mb-6">O que nossos clientes dizem</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                {[
-                  { name: "Edilson Fernando Silva", text: "Pronto atendimento; educação e atenção com o cliente. Serviço Recomendado!", stars: 5, date: "1 semana atrás" },
-                  { name: "Eliana Fonseca", text: "Serviço super rápido e eficiente. Parabéns!", stars: 5, date: "3 semanas atrás" },
-                  { name: "Débora Tasso", text: "Profissionais capacitados e cuidadosos, muito gente fina. Fizeram toda a adequação elétrica da minha casa e...", stars: 5, date: "3 semanas atrás" },
-                  { name: "Flavio Souza", text: "Parabéns ao time de excelentes profissionais, que oferecem produtos e serviços de qualidade. Uma empresa que trata com...", stars: 5, date: "3 semanas atrás" }
-                ].map((review, i) => (
-                  <div key={i} className="bg-white p-5 rounded-xl text-left shadow-md border border-gray-100 relative">
-                    <div className="flex justify-between items-start mb-3">
-                      <div className="flex flex-col">
-                        <span className="text-blue-950 text-base font-bold flex items-center gap-1">
-                          {review.name}
-                          <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        </span>
-                        <span className="text-gray-500 text-xs">{review.date}</span>
-                      </div>
-                      <svg className="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c3.15 0 5.79-1.05 7.67-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.7 1.06-2.85 0-5.27-1.92-6.13-4.51H2.18v2.84C4.15 20.59 7.83 23 12 23z" fill="#34A853"/>
-                        <path d="M5.87 13.93c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V6.91H2.18C1.43 8.44 1 10.17 1 12s.43 3.56 1.18 5.09l3.69-2.84z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.71 0 3.24.59 4.45 1.71l3.33-3.33C17.78 1.84 15.15 1 12 1 7.83 1 4.15 3.41 2.18 6.91l3.69 2.84c.86-2.59 3.28-4.51 6.13-4.51z" fill="#EA4335"/>
-                      </svg>
-                    </div>
-                    <div className="flex gap-1 mb-4">
-                      {[...Array(review.stars)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="text-gray-800 text-sm leading-relaxed line-clamp-6 italic">"{review.text}"</p>
-                    <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Avaliação Verificada</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <TrustindexWidget />
             </div>
             <a
               href="https://g.page/r/CR9hqmiONmcMEBM/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-medium text-white transition-colors border border-white/10"
+              className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 hover:bg-white/20 rounded-lg font-medium text-white transition-colors"
             >
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               Avalie-nos no Google
