@@ -420,7 +420,12 @@ export default function Home() {
                         </span>
                         <span className="text-gray-400 text-[10px]">{review.date}</span>
                       </div>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google" className="w-4 h-4" />
+                      <svg className="w-4 h-4" viewBox="0 0 24 24">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c3.15 0 5.79-1.05 7.67-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.7 1.06-2.85 0-5.27-1.92-6.13-4.51H2.18v2.84C4.15 20.59 7.83 23 12 23z" fill="#34A853"/>
+                        <path d="M5.87 13.93c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V6.91H2.18C1.43 8.44 1 10.17 1 12s.43 3.56 1.18 5.09l3.69-2.84z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.71 0 3.24.59 4.45 1.71l3.33-3.33C17.78 1.84 15.15 1 12 1 7.83 1 4.15 3.41 2.18 6.91l3.69 2.84c.86-2.59 3.28-4.51 6.13-4.51z" fill="#EA4335"/>
+                      </svg>
                     </div>
                     <div className="flex gap-0.5 mb-3">
                       {[...Array(review.stars)].map((_, i) => (
