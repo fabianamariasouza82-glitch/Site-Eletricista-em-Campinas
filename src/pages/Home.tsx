@@ -414,27 +414,27 @@ export default function Home() {
                   <div key={i} className="bg-white p-5 rounded-xl text-left shadow-md border border-gray-100 relative">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex flex-col">
-                        <span className="text-blue-950 text-sm font-bold flex items-center gap-1">
+                        <span className="text-blue-950 text-base font-bold flex items-center gap-1">
                           {review.name}
-                          <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                          <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         </span>
-                        <span className="text-gray-400 text-[10px]">{review.date}</span>
+                        <span className="text-gray-500 text-xs">{review.date}</span>
                       </div>
-                      <svg className="w-4 h-4" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6" viewBox="0 0 24 24">
                         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                         <path d="M12 23c3.15 0 5.79-1.05 7.67-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.7 1.06-2.85 0-5.27-1.92-6.13-4.51H2.18v2.84C4.15 20.59 7.83 23 12 23z" fill="#34A853"/>
                         <path d="M5.87 13.93c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V6.91H2.18C1.43 8.44 1 10.17 1 12s.43 3.56 1.18 5.09l3.69-2.84z" fill="#FBBC05"/>
                         <path d="M12 5.38c1.71 0 3.24.59 4.45 1.71l3.33-3.33C17.78 1.84 15.15 1 12 1 7.83 1 4.15 3.41 2.18 6.91l3.69 2.84c.86-2.59 3.28-4.51 6.13-4.51z" fill="#EA4335"/>
                       </svg>
                     </div>
-                    <div className="flex gap-0.5 mb-3">
+                    <div className="flex gap-1 mb-4">
                       {[...Array(review.stars)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-gray-700 text-xs leading-relaxed line-clamp-4 italic">"{review.text}"</p>
-                    <div className="mt-3 pt-3 border-t border-gray-50 flex items-center justify-between">
-                      <span className="text-[9px] font-bold text-blue-600 uppercase tracking-wider">Avaliação Verificada</span>
+                    <p className="text-gray-800 text-sm leading-relaxed line-clamp-6 italic">"{review.text}"</p>
+                    <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                      <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Avaliação Verificada</span>
                     </div>
                   </div>
                 ))}
