@@ -121,9 +121,9 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section v2.1 - Forcing height update */}
+      {/* Hero Section v3.0 - Full Screen Height */}
       <section 
-        className="relative overflow-hidden min-h-[600px] md:min-h-[90vh] flex items-center bg-blue-950 bg-cover bg-[center_top]"
+        className="relative overflow-hidden min-h-[650px] md:min-h-screen flex items-center bg-blue-950 bg-cover bg-center"
         style={{ 
           backgroundImage: 'linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.4) 50%, transparent 100%), url("/manus-storage/hero_eletricista_8af14beb.jpg")',
           backgroundSize: 'cover',
