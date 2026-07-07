@@ -130,25 +130,25 @@ export default function Home() {
           backgroundPosition: 'center 5%'
         }}
       >
-        <div className="container relative py-24 md:py-40">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="container relative py-32 md:py-48">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Eletricista Profissional em Campinas
             </h1>
-            <p className="text-lg text-blue-100 mb-8">
+            <p className="text-xl md:text-2xl text-blue-50 mb-10 max-w-2xl leading-relaxed">
               Mais de 20 anos de experiência. Atendimento 24 horas para residências, comércios e condomínios. Certificado NR10 e NR35.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6">
               <a 
                 href="https://api.whatsapp.com/send/?phone=5519994252525&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento."
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent text-accent-foreground rounded-xl text-lg font-bold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-6 h-6" />
                 Solicitar Orçamento
               </a>
               <a 
                 href="#servicos"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-colors border border-white/30"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 text-white rounded-xl text-lg font-bold hover:bg-white/20 transition-all border border-white/30 backdrop-blur-sm"
               >
                 Ver Serviços
               </a>
