@@ -121,13 +121,13 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section v2.1 - Forcing height update */}
       <section 
-        className="relative overflow-hidden min-h-[550px] md:min-h-[850px] flex items-center bg-blue-950 bg-cover bg-[center_top]"
+        className="relative overflow-hidden min-h-[600px] md:min-h-[90vh] flex items-center bg-blue-950 bg-cover bg-[center_top]"
         style={{ 
           backgroundImage: 'linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.4) 50%, transparent 100%), url("/manus-storage/hero_eletricista_8af14beb.jpg")',
           backgroundSize: 'cover',
-          backgroundPosition: 'center 10%'
+          backgroundPosition: 'center 5%'
         }}
       >
         <div className="container relative py-24 md:py-40">
