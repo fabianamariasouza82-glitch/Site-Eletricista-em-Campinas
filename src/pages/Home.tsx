@@ -122,16 +122,16 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[420px] sm:min-h-[520px] md:min-h-[780px] lg:min-h-[900px]">
+      <section className="relative overflow-hidden min-h-[500px] md:min-h-[750px] flex items-center">
         <div className="absolute inset-0">
           <img 
             src="/manus-storage/hero_eletricista_8af14beb.jpg" 
             alt="Eletricista profissional" 
-            className="w-full h-full object-cover object-[center_15%] md:object-[75%_15%]"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/60 to-transparent"></div>
         </div>
-        <div className="container relative py-20 md:py-40 lg:py-48">
+        <div className="container relative py-24 md:py-32">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Eletricista Profissional em Campinas
