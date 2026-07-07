@@ -123,10 +123,14 @@ export default function Home() {
 
       {/* Hero Section */}
       <section 
-        className="relative overflow-hidden min-h-[450px] md:min-h-[600px] flex items-center bg-blue-950 bg-cover bg-[center_top]"
-        style={{ backgroundImage: 'linear-gradient(to right, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.4) 50%, transparent 100%), url("/manus-storage/hero_eletricista_8af14beb.jpg")' }}
+        className="relative overflow-hidden min-h-[550px] md:min-h-[850px] flex items-center bg-blue-950 bg-cover bg-[center_top]"
+        style={{ 
+          backgroundImage: 'linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.4) 50%, transparent 100%), url("/manus-storage/hero_eletricista_8af14beb.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 10%'
+        }}
       >
-        <div className="container relative py-16 md:py-24">
+        <div className="container relative py-24 md:py-40">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Eletricista Profissional em Campinas
