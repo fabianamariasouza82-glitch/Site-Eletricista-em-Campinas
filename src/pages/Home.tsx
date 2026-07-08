@@ -83,12 +83,12 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-        <div className="container flex items-center justify-between h-28">
+        <div className="container flex items-center justify-between h-24">
           <div className="flex items-center gap-2">
             <img 
               src="/manus-storage/logo_eletricista_280fb94a.png" 
               alt="Eletricista em Campinas" 
-              className="h-24 w-auto"
+              className="h-16 w-auto"
             />
           </div>
           <nav className="hidden md:flex items-center gap-8">
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
         <div className="container relative py-20 md:py-40 lg:py-48">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               Eletricista Profissional em Campinas
             </h1>
             <p className="text-lg text-blue-100 mb-8">
@@ -162,7 +162,7 @@ export default function Home() {
       {/* Benefits Section */}
       <section className="py-16 bg-blue-50">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {benefits.map((benefit, idx) => {
               const Icon = benefit.icon;
               return (
