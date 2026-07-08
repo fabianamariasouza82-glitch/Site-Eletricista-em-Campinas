@@ -83,12 +83,12 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-        <div className="container flex items-center justify-between h-24">
+        <div className="container flex items-center justify-between h-28">
           <div className="flex items-center gap-2">
             <img 
               src="/manus-storage/logo_eletricista_280fb94a.png" 
               alt="Eletricista em Campinas" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </div>
           <nav className="hidden md:flex items-center gap-8">
@@ -401,7 +401,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-blue-800 pt-8 flex flex-col items-center gap-6 text-center text-blue-200 text-sm">
-            <div className="w-full">
+            <div className="w-full max-w-5xl mx-auto">
               <h3 className="text-xl font-bold text-white mb-6">O que nossos clientes dizem</h3>
               <TrustindexWidget />
             </div>
