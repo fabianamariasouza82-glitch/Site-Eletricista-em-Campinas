@@ -33,12 +33,12 @@ export default function BlogPost() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-        <div className="container flex items-center justify-between h-32">
+        <div className="container flex items-center justify-between h-40">
           <a href="/" className="flex items-center gap-2">
             <img 
               src="/manus-storage/logo_eletricista_280fb94a.png" 
               alt="Eletricista em Campinas" 
-              className="h-28 w-auto"
+              className="h-36 w-auto"
             />
           </a>
           <a 
