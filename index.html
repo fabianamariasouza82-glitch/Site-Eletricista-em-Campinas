@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="pt-BR">
-
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -17,9 +16,39 @@
     <meta property="og:locale" content="pt_BR" />
     <link rel="canonical" href="https://eletricistaemcampinas.com.br/" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <!-- Preload da imagem principal do Hero: é o elemento de LCP
+         (Largest Contentful Paint) da página. Sem isso, o navegador só
+         descobre essa imagem depois de baixar e processar o JavaScript
+         React, atrasando o carregamento dela desnecessariamente. -->
+    <link rel="preload" as="image" href="/manus-storage/hero_eletricista_8af14beb.jpg" fetchpriority="high" />
+
+    <!-- Fontes carregadas de forma não-bloqueante: preconnect antecipa a
+         conexão, e o truque do media="print" + onload evita que o
+         carregamento da fonte atrase a primeira renderização da página
+         (antes, o <link rel="stylesheet"> padrão bloqueava a
+         renderização — era a causa do aviso "Solicitações que
+         bloquearam a renderização" no PageSpeed Insights). -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+      />
+    </noscript>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,11 +98,8 @@
     }
     </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
   </body>
-
 </html>
