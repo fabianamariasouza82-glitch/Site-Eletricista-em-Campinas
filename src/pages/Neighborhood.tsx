@@ -94,7 +94,7 @@ export default function Neighborhood() {
         <div className="container flex items-center justify-between h-32">
           <a href="/" className="flex items-center gap-2">
             <img 
-              src="/manus-storage/logo_eletricista_280fb94a.jpg" 
+              src="/manus-storage/logo_eletricista_280fb94a.png" 
               alt="Eletricista em Campinas" 
               className="h-28 w-auto"
             />
