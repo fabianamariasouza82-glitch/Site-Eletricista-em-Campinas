@@ -61,3 +61,4 @@ Isso substitui completamente a necessidade do plano pago do Manus.
 3. Isso gera uma pasta `dist/` com HTML/CSS/JS prontos. Envie o **conteúdo**
    dessa pasta via FTP/gerenciador de arquivos para a raiz (`public_html`) da
    sua hospedagem.
+   
