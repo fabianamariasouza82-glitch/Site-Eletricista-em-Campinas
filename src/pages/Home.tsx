@@ -89,6 +89,8 @@ export default function Home() {
               src="/manus-storage/logo_eletricista_280fb94a.png" 
               alt="Eletricista em Campinas" 
               className="h-24 w-auto"
+              width={200}
+              height={96}
             />
           </div>
           <nav className="hidden md:flex items-center gap-8">
@@ -125,10 +127,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[420px] sm:min-h-[520px] md:min-h-[780px] lg:min-h-[900px]">
         <div className="absolute inset-0">
+          {/* Esta é a imagem de LCP (Largest Contentful Paint) da página —
+              o maior elemento visível assim que ela carrega. Por isso
+              carrega com prioridade alta (fetchPriority="high") e sem
+              lazy loading, além de width/height explícitos para o
+              navegador reservar o espaço corretamente antes de baixá-la. */}
           <img 
             src="/manus-storage/hero_eletricista_8af14beb.jpg" 
             alt="Eletricista profissional" 
             className="w-full h-full object-cover object-[center_15%] md:object-[75%_15%]"
+            loading="eager"
+            fetchPriority="high"
+            width={1920}
+            height={1280}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/40"></div>
         </div>
