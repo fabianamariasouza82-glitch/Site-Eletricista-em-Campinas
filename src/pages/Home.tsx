@@ -94,6 +94,7 @@ export default function Home() {
             />
           </div>
           <nav className="hidden md:flex items-center gap-8">
+            <a href="/" className="text-lg font-medium text-foreground hover:text-accent transition-colors">Home</a>
             <a href="#servicos" className="text-lg font-medium text-foreground hover:text-accent transition-colors">Serviços</a>
             <a href="#sobre" className="text-lg font-medium text-foreground hover:text-accent transition-colors">Sobre</a>
             <a href="#contato" className="text-lg font-medium text-foreground hover:text-accent transition-colors">Contato</a>
@@ -117,6 +118,7 @@ export default function Home() {
         </div>
         {menuOpen && (
           <nav className="md:hidden flex flex-col bg-white border-t border-border">
+            <a href="/" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-lg font-medium text-foreground border-b border-border">Home</a>
             <a href="#servicos" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-lg font-medium text-foreground border-b border-border">Serviços</a>
             <a href="#sobre" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-lg font-medium text-foreground border-b border-border">Sobre</a>
             <a href="#contato" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-lg font-medium text-foreground">Contato</a>
