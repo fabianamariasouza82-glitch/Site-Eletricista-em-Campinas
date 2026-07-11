@@ -227,9 +227,12 @@
 
 /* Centraliza o widget de avaliações do Trustindex.
    O trilho que segura os cartões (.ti-reviews-container-wrapper) alinha
-   à esquerda por padrão, mesmo quando todos os cartões cabem na tela. */
+   à esquerda por padrão, mesmo quando todos os cartões cabem na tela.
+   IMPORTANTE: não usar flex-wrap aqui — esse widget é um carrossel
+   controlado por JavaScript (desliza os cards com animação). Forçar
+   quebra de linha via CSS faz os cards empilharem de forma bagunçada
+   ("mosaico"), em vez de deslizar lado a lado como um carrossel normal. */
 .ti-reviews-container-wrapper {
   display: flex !important;
-  justify-content: center !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
 }
