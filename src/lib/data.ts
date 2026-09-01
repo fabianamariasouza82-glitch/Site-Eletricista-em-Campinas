@@ -613,9 +613,7 @@ Sua segurança depende de normas sendo respeitadas!`,
 - Conhecimento técnico comprovado
 - Segue as normas de segurança
 - Oferece garantia do trabalho
-- Tem responsabilidade legal
 - Usa materiais de qualidade
-- Trabalho mais rápido e eficiente
 
 **Certificações que você deve exigir:**
 - NR10: Segurança em eletricidade
@@ -628,12 +626,6 @@ Sua segurança depende de normas sendo respeitadas!`,
 - Sem garantia
 - Pode danificar equipamentos
 - Risco de incêndio ou choque
-- Sem responsabilidade legal
-
-**Como verificar se é certificado:**
-- Peça certificados
-- Solicite referências
-- Verifique avaliações
 
 Não economize com segurança! Sempre contrate um profissional certificado!`,
     date: "2026-06-13",
