@@ -596,7 +596,6 @@ Manutenção preventiva traz segurança e tranquilidade para sua família!`,
 
 **Ao contratar um eletricista:**
 - Verifique se tem NR10
-- Solicite ART (Anotação de Responsabilidade Técnica)
 - Exija respeito às normas NBR
 - Não contrate amadores
 
