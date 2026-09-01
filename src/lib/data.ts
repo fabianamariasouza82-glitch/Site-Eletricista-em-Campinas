@@ -621,7 +621,6 @@ Sua segurança depende de normas sendo respeitadas!`,
 **Certificações que você deve exigir:**
 - NR10: Segurança em eletricidade
 - NR35: Trabalho em altura
-- Registro na CREA
 - Cursos de especialização
 
 **Riscos de contratar amador:**
@@ -634,9 +633,7 @@ Sua segurança depende de normas sendo respeitadas!`,
 
 **Como verificar se é certificado:**
 - Peça certificados
-- Verifique no CREA
 - Solicite referências
-- Peça ART
 - Verifique avaliações
 
 Não economize com segurança! Sempre contrate um profissional certificado!`,
