@@ -150,48 +150,6 @@ Chame um eletricista profissional. Ele instala com segurança e rapidez. Solicit
     category: "Instalação",
   },
   {
-    id: "quanto-custa-eletricista",
-    title: "Quanto Custa um Eletricista em Campinas? Saiba Como Funciona",
-    excerpt: "Entenda como é calculado o orçamento de um eletricista em Campinas e como solicitar um orçamento gratuito.",
-    content: `Está com dúvida sobre quanto custa chamar um eletricista em Campinas? O valor depende de vários fatores — por isso trabalhamos sempre com orçamento personalizado, gratuito e sem compromisso.
-    
-**Fatores que influenciam o orçamento:**
-- Tipo de serviço (simples, intermediário ou complexo)
-- Urgência do atendimento
-- Materiais necessários
-- Tamanho e condições do imóvel
-- Localização dentro de Campinas
-
-**Tipos de serviços:**
-
-**Serviços Simples:**
-- Troca de tomadas e interruptores
-- Troca de lâmpadas e spots
-- Verificação de disjuntores
-
-**Serviços Intermediários:**
-- Instalação de chuveiro elétrico
-- Troca de disjuntor
-- Instalação de tomadas novas
-
-**Serviços Complexos:**
-- Reforma elétrica completa
-- Ampliação de circuitos
-- Projeto elétrico residencial ou comercial
-
-**Dica importante:**
-- Sempre peça orçamento ANTES de contratar
-- Desconfie de propostas muito abaixo do mercado sem avaliação prévia
-- Priorize profissionais certificados (NR10 e NR35)
-- Solicite garantia do trabalho
-- Exija nota fiscal
-
-**Como solicitar seu orçamento:**
-Entre em contato pelo WhatsApp. Descrevendo o problema ou serviço desejado, enviamos um orçamento detalhado, gratuito e sem compromisso!`,
-    date: "2026-07-01",
-    category: "Orçamento",
-  },
-  {
     id: "tomada-queimada",
     title: "Tomada Queimada ou com Marcas Pretas",
     excerpt: "Descubra por que as tomadas queimam e como identificar esse problema antes que cause danos maiores.",
